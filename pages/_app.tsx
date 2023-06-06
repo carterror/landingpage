@@ -80,8 +80,8 @@ export default function MyApp(props: MyAppProps) {
               <meta property="twitter:description" content="Havana Skate Marathon 2022" />
               <meta property="twitter:image" content="https://www.havanaskatemarathon.com/logo.png"></meta>
               <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+              <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+              <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
 
             </Head>
             <ThemeProvider theme={activeTheme}>
