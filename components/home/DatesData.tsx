@@ -20,13 +20,33 @@ export const DatesData = () => {
     const { t } = useTranslation()
 
     return (
-        <Container>
-            <Grid container spacing={0} justifyContent="center">
-                <Grid item xs={12} lg={10}>
-                    <Typography variant="body1" color="primary" sx={{ fontWeight: "400" }}>
-                        {text}
-                    </Typography>
+        <>
+            <Grid container spacing={0} padding={15} sx={{backgroundColor: '#120f2e', color: "white"}}>
+                <Container>
+                <Grid container spacing={2} justifyContent="space-between" sx={{backgroundColor: '#120f2e', color: "white"}}>
+                <Grid item xs={12} md={6} display={'block'} sx={{borderRight: {xs: 'none', md: 'solid #ccc 2px'}, borderBottom: {xs: 'solid #ccc 2px', md: 'none'}, fontWeight: 800, fontSize: 40, paddingRight: 20, paddingBottom: 10, marginBottom: {xs: 10, md: 0} }}>
+                    Lorem, ipsum dolor sit amet consectetur  adipisicing elit!
                 </Grid>
+                <Grid item xs={12}  md={6}>
+                    <Grid item xs={12} marginBottom={8} sx={{paddingLeft: 8}}>
+                        <Typography variant="h6" fontWeight={600}>Lorem ipsum dolor sit amet consectetur.</Typography>
+                        <Typography color={'secondary'}>aaaaaaaaaaaaaaaaaaa</Typography>
+                        
+                    </Grid>
+                    <Grid item xs={12} marginBottom={8} sx={{paddingLeft: 8}}>
+                        <Typography variant="h6" fontWeight={600}>Lorem ipsum dolor sit amet consectetur.</Typography>
+                        <Typography color={'secondary'}>aaaaaaaaaaaaaaaaaaa</Typography>
+                        
+                    </Grid>
+                    <Grid item xs={12} marginBottom={8} sx={{paddingLeft: 8}}>
+                        <Typography variant="h6" fontWeight={600}>Lorem ipsum dolor sit amet consectetur.</Typography>
+                        <Typography color={'secondary'}>aaaaaaaaaaaaaaaaaaa</Typography>
+                        
+                    </Grid>
+
+                </Grid>
+                </Grid>
+                </Container>
             </Grid>
             <Swiper
                 className="mySwiper"
@@ -52,6 +72,6 @@ export const DatesData = () => {
                     ))
                 }
             </Swiper>
-        </Container>
+        </>
     );
 };

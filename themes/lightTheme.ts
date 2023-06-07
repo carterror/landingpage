@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material";
+import { createTheme, Button } from '@mui/material';
 
 let theme = createTheme()
 
@@ -81,7 +81,7 @@ export const lightTheme = createTheme(theme , {
         root: {
           textTransform: 'none',
           boxShadow: 'none',
-          borderRadius: 10,
+          borderRadius: 0,
           ":hover": {
             opacity: 0.8,
             transition: 'all 0.3s ease-in-out'

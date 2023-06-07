@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import { Box, Button, Card, CardContent, Container, Grid, Typography } from '@mui/material'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from "../../styles/Index.module.css";
@@ -12,6 +12,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import 'swiper/css/effect-fade';
+import Image from 'next/image';
+import ShareIcon from '@mui/icons-material/Share';
+import { Grid3x3 } from '@mui/icons-material';
 
 
 export const InitialData = () => {
@@ -27,60 +30,31 @@ export const InitialData = () => {
   return (
     <Grid className={styles.bgHome}>
     <Grid item xs={12}>
-      <Container sx={{ mt: "80px" }}>
-        <Grid container spacing={2} display="flex" justifyContent={"end"}>
-          <Grid item xs={12}  wrap="nowrap">
-          <Swiper
-                       
-                       spaceBetween={10}
-                       centeredSlides={true}
-                       autoplay={{
-                         delay: 2500,
-                         disableOnInteraction: false,
-                       }}
-                       pagination={{
-                         clickable: true,
-                       }}
-                       navigation={true}
-                       modules={[Autoplay, Pagination, Navigation]}
-                       className="mySwiper"
-                       effect="fade"
-                       >
-                        <SwiperSlide>
-                            <ImageFT
-                                src={"/0.jpg"}
-                                width="0"
-                                height="0"
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto", borderRadius: "10px" }}
-                                alt={"banner3"}
-                            />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <ImageFT
-                                src={"/1.jpg"}
-                                width="0"
-                                height="0"
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto", borderRadius: "10px" }}
-                                alt={""}
-                            />
-                        </SwiperSlide>
-
-                        <SwiperSlide>
-                            <ImageFT
-                                src={"/2.jpg"}
-                                width="0"
-                                height="0"
-                                sizes="100vw"
-                                style={{ width: "100%", height: "auto", borderRadius: "10px" }}
-                                alt={"banner3"}
-                            />
-                        </SwiperSlide>
-                    </Swiper>
+        <Grid container spacing={2} display="flex" justifyContent={"space-between"} paddingY={10}>
+          <Grid item xs={12} md={6} display="flex" justifyContent={"end"}>
+            <Grid item xs={12} paddingY={5} paddingX={5}>
+                <Typography fontSize={50} fontWeight={900} >
+                  Grow, Manage and pay your temp workforce
+                </Typography>
+                <Typography fontSize={20} color='secondary' fontWeight={600} marginTop={2}>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quas magnam blanditiis accusamus qui laudantium expedita nesciunt eveniet.
+                </Typography>
+                <Box paddingTop={4}>
+                <Button color='secondary' sx={{fontSize: 20, paddingX: 2, paddingY: 1, marginRight: 2}} endIcon={<ShareIcon />} >Get in touch</Button>
+                <Button variant='outlined' color='secondary' sx={{fontSize: 20, paddingX: 2, paddingY: 1, fontWeight: 600}}>Call: 55016899</Button>
+                </Box>
+                </Grid>
+          </Grid>
+          <Grid item xs={12} md={6}  display="flex" justifyContent={"end"}>
+            <Image
+              src="/b1.png"
+              width={500}
+              height={500}
+              alt="Picture of the author"
+            />
           </Grid>
         </Grid>
-      </Container>
+
     </Grid>
   </Grid>
   )

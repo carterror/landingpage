@@ -66,7 +66,7 @@ export default function DrawerAppBar(props: Props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { md: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -78,17 +78,17 @@ export default function DrawerAppBar(props: Props) {
             alignItems="center"
           >
 
-            <Box item >
+            <Grid item >
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}
+                sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block', md: 'block' } }}
               >
                 BUILD
               </Typography>
-            </Box>
+            </Grid>
             
-            <Grid item spacing={5} sx={{ display: { xs: 'none', sm: 'flex'} }}>
+            <Grid item spacing={5} sx={{ display: { xs: 'none', sm: 'none', md: 'block'} }}>
               {navItems.map((item) => (
                 <Link key={item} href="#" underline="none" sx={{marginX: 1, '&:hover': {
                   color: '#CCC',
@@ -98,16 +98,16 @@ export default function DrawerAppBar(props: Props) {
               ))}
             </Grid>
 
-            <Box item sx={{ display: { xs: 'none', sm: 'flex' } }}>
+            <Grid item sx={{ display: { xs: 'block', sm: 'block', md: 'block'} }}>
              
-                <Button sx={{ borderRadius: 0, marginX: 1 }} color='warning' endIcon={<SendIcon />}>
+                <Button sx={{ marginX: 1 }} color='warning' endIcon={<SendIcon />}>
                   Hire Works
                 </Button>
-                <Button sx={{ borderRadius: 0, marginX: 1 }} variant='outlined' color='warning'>
+                <Button sx={{ marginX: 1 }} variant='outlined' color='warning'>
                   Find Work
                 </Button>
              
-            </Box>
+            </Grid>
 
           </Grid>
           
@@ -123,7 +123,7 @@ export default function DrawerAppBar(props: Props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', sm: 'block' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >

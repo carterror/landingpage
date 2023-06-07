@@ -24,9 +24,9 @@ export const Footer = () => {
     return (
         <Grid container spacing={0} className={styles.bgInfoContact}>
             <Box sx={{ backgroundColor: "info.main", py: 3, px: 4 }}>
-                <Grid container spacing={2} justifyContent="center">
+                <Grid container spacing={2} justifyContent="space-between">
                     <Grid item xs={12} md={6} lg={4}>
-                        <Box display={"flex"} flexDirection="column" sx={{ px: 2 }}>
+                        <Box display={"flex"} flexDirection="column" justifyContent="center" sx={{ px: 2 }}>
                             <Typography variant="h4" color="white">
                                 Etravel Bojorquez
                             </Typography>
@@ -40,7 +40,7 @@ export const Footer = () => {
 
                     <Grid item xs={12} md={6} lg={8}>
                         <Grid container spacing={0}>
-                            <Grid item xs={12} md={5}>
+                            <Grid item xs={12} md={4}>
                                 <Stack spacing={1} sx={{ marginLeft: 2 }}>
                                 <Typography variant="body1" color="white">
                                         <strong>Razón Social: </strong>
@@ -63,7 +63,7 @@ export const Footer = () => {
                                 </Stack>
                             </Grid>
 
-                            <Grid item xs={12} md={7} sx={{ textAlign: "center" }}>
+                            <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
                                 <Typography variant="h5" sx={{ mb: 3 }} color={"white"}>
                                     Centro de Ayuda
                                 </Typography>
@@ -93,32 +93,10 @@ export const Footer = () => {
                                     </a>
                                 </Stack>
                             </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Divider sx={{ backgroundColor: "#fff" }} />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Container>
-                            <Grid
-                                container
-                                spacing={1}
-                                direction="row"
-                                justifyContent="center"
-                                alignItems="center"
-                                alignContent="center"
-                                wrap="wrap">
-                                <Grid item xs={12} md={6} lg={4}>
-                                    <Typography variant="caption" color="white">
-                                        © ETravel Bojorquez {new Date().getFullYear()}. All right
-                                        reserved
-                                    </Typography>
-                                </Grid>
-                                <Grid item xs={12} md={6} lg={4}></Grid>
-                                <Grid item xs={12} md={6} lg={4}>
+
+                            <Grid item xs={12} md={4}>
                                     <Stack
                                         direction="row"
-                                        divider={<Divider orientation="vertical" flexItem />}
                                         spacing={2}>
                                         <IconButton>
                                             <Facebook sx={{ color: "#fff" }} />
@@ -128,13 +106,33 @@ export const Footer = () => {
                                             <Instagram sx={{ color: "#fff" }} />
                                         </IconButton>
 
-                                        {/*     <IconButton>
-                                            <Twitter color="inherit" />
-                                        </IconButton> */}
+                                            <IconButton>
+                                            <Twitter color="inherit" sx={{ color: "#fff" }} />
+                                        </IconButton>
                                     </Stack>
                                 </Grid>
+                        </Grid>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        
+                            <Grid
+                                spacing={1}
+                                direction="row"
+                                justifyContent="left"
+                                alignItems="left"
+                                alignContent="left"
+                                wrap="wrap">
+                                <Grid item xs={12} md={6} lg={4}>
+                                    <Typography variant="caption" color="white">
+                                        © ETravel Bojorquez {new Date().getFullYear()}. All right
+                                        reserved
+                                    </Typography>
+                                </Grid>
+                                
+                               
                             </Grid>
-                        </Container>
+                    
                     </Grid>
                 </Grid>
             </Box>
