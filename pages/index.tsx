@@ -8,6 +8,7 @@ import { ContactData } from "../components/home/ContactData";
 import { Footer } from "../components/home/Footer";
 import { PriceData } from "../components/home/PriceData";
 import { GetStaticProps } from "next";
+import Head from "next/head";
 
 interface Props {
     toggleTheme: any;
@@ -15,9 +16,13 @@ interface Props {
 
 const Home: FC<Props> = ({ toggleTheme }) => {
     return (
+        
         <ShopLayout title="Etravel Bojorquez" 
         pageDescription="Descubre el Caribe auténtico, sus lugares escondidos y las leyendas locales que solo conocen los que viven en él." 
         toggleTheme={toggleTheme} imageFullUrl="/logo2.jpg">
+          <Head>
+            <meta name="keywords" content="sadasdsa" />
+          </Head>
             <section id={"home"}>
                 <InitialData />
             </section>
@@ -46,12 +51,12 @@ const Home: FC<Props> = ({ toggleTheme }) => {
     );
 };
 
-export const getStaticProps: GetStaticProps = async (/* { locale } */) => {
-    return {
-      props: {
-        /* ...(await serverSideTranslations(locale || defaultLanguage, ["common"])), */
-      },
-    };
-  };
+// export const getStaticProps: GetStaticProps = async (/* { locale } */) => {
+//     return {
+//       props: {
+//         /* ...(await serverSideTranslations(locale || defaultLanguage, ["common"])), */
+//       },
+//     };
+//   };
   
-  export default Home;
+export default Home;

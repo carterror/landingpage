@@ -17,13 +17,16 @@ import {
 import Image from "next/image";
 import React from "react";
 import NextLink from "next/link";
+import bgImage from '../../public/textura.png';
 
 import styles from "../../styles/Index.module.css";
 
 export const Footer = () => {
     return (
-        <Grid container spacing={0} className={styles.bgInfoContact}>
-            <Box sx={{ backgroundColor: "info.main", py: 3, px: 4 }}>
+        <Grid container spacing={0} className={styles.bgInfoContact} sx={{ backgroundImage: `url('${bgImage.src}')`, backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',filter: 'contrast(1.3)' }}>
+            <Box  sx={{ py: 3, px: 4,  }}>
                 <Grid container spacing={2} justifyContent="space-between">
                     <Grid item xs={12} md={6} lg={4}>
                         <Box display={"flex"} flexDirection="column" justifyContent="center" sx={{ px: 2 }}>
@@ -49,16 +52,6 @@ export const Footer = () => {
                                     <Typography variant="body1" color="white">
                                         <strong>Dirección: </strong>
                                         Calle CRUZ ROJA 1 Bloque 5 Semisótano 17. 46.014 VALENCIA
-                                    </Typography>
-
-                                    <Typography variant="body1" color="white">
-                                       <strong>Inscripción en el Registro Mercantil: </strong>
-                                       Tomo: 9739,  Libro: 7021,  Folio: 189,  Sección: GNE, Hoja: 157675
-                                    </Typography>
-
-                                    <Typography variant="body1" color="white">
-                                    <strong>Número de Identificación fiscal: </strong>
-                                    B98607021
                                     </Typography>
                                 </Stack>
                             </Grid>
@@ -122,6 +115,7 @@ export const Footer = () => {
                                 justifyContent="left"
                                 alignItems="left"
                                 alignContent="left"
+                                padding={'50px 10px'}
                                 wrap="wrap">
                                 <Grid item xs={12} md={6} lg={4}>
                                     <Typography variant="caption" color="white">
