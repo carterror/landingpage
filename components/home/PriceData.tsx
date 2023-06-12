@@ -23,9 +23,9 @@ export const PriceData = () => {
                             color="black"
                             sx={{ fontWeight: "900", fontStyle: "normal" }}>
                             {t("Viajes a la medida ")} 
-                            <Box bgcolor={'yellow'} display={'inline'} padding={1} borderRadius={'30px 0px 30px 0px'}>
+                            <Typography variant='h4' sx={{ fontWeight: "750" }} bgcolor={'yellow'} display={'inline'} padding={'0px 20px'} borderRadius={'10px 0px 10px 0px'}>
                                 Prueba
-                            </Box>
+                            </Typography>
                         </Typography>
                     </Grid>
 

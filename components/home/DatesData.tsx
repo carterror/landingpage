@@ -15,8 +15,6 @@ import { PlaceCard } from "../cards/PlaceCard";
 import { carData } from "../../config/cardData";
 import bgImage from '@/../../public/textura.png';
 
-let text = "Nuestros guías de viaje te harán vivir una experiencia única e irrepetible. Descubre el Caribe auténtico, sus lugares escondidos y las leyendas locales que solo conocen los que viven en él .Te diseñaremos un viaje totalmente a tu medida, desde paquetes todo incluido a viajes personalizados hasta el mínimo detalle, en grupo reducido o en privado."
-
 export const DatesData = () => {
     const { t } = useTranslation()
 
