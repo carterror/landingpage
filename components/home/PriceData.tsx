@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Theme, Typography } from "@mui/material";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import styles from "../../styles/Index.module.css";
@@ -8,7 +8,7 @@ export const PriceData = () => {
     const { t } = useTranslation();
 
     return (
-        <Grid xs={12} md={10} sx={{ py: 5, backgroundColor: "", padding: 5 }} id="price">
+        <Grid xs={12} md={10} my={5} sx={{ py: 5, backgroundColor: "", padding: 5 }} id="price">
             
                 <Grid
                     container
@@ -23,9 +23,24 @@ export const PriceData = () => {
                             color="black"
                             sx={{ fontWeight: "900", fontStyle: "normal" }}>
                             {t("Viajes a la medida ")} 
-                            <Typography variant='h4' sx={{ fontWeight: "750" }} bgcolor={'yellow'} display={'inline'} padding={'0px 20px'} borderRadius={'10px 0px 10px 0px'}>
+                            {/* <Box component={'polygon'} points="0,100 50,00, 100,100" variant='h4' sx={{ fontWeight: "750" }} bgcolor={'yellow'} display={'inline'} padding={'0px 20px'} borderRadius={'10px 0px 10px 0px'}>
                                 Prueba
-                            </Typography>
+                            </Box> */}
+                            <Box component="svg" sx={{ width: 200, height: 60, zIndex: 20 }}>
+                                <Box
+                                    component="polygon"
+                                    sx={{
+                                    fill: (theme: Theme) => 'yellow',
+                                    strokeWidth: 1,
+                                    }}
+                                    points=" 0,60 0,10 200,0  200,50"
+                                />
+                                <Typography sx={{position: 'absolute', zIndex: 999, top: 200, color: 'red'}}>
+                                    askjfbasfjabfkjl
+                                </Typography>
+                            </Box>
+                            
+                            
                         </Typography>
                     </Grid>
 

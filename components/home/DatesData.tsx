@@ -3,7 +3,7 @@ import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import { useTranslation } from 'react-i18next'
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation, Parallax } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -14,9 +14,11 @@ import { FreeMode, Pagination } from "swiper";
 import { PlaceCard } from "../cards/PlaceCard";
 import { carData } from "../../config/cardData";
 import bgImage from '@/../../public/textura.png';
+import ScrollSpy from "../commons/ScrollSpy";
+
+
 
 export const DatesData = () => {
-    const { t } = useTranslation()
 
     return (
         <>
@@ -30,23 +32,31 @@ export const DatesData = () => {
                                 Prueba
                             </Box> adipisicing elit!
                 </Grid>
+               
+               
                 <Grid item xs={12}  md={6}>
-                    <Grid item xs={12} marginBottom={8} sx={{paddingLeft: 8}}>
-                        <Typography variant="h6" fontWeight={600}>Lorem ipsum dolor sit amet consectetur.</Typography>
-                        <Typography color={'secondary'}>aaaaaaaaaaaaaaaaaaa</Typography>
-                        
-                    </Grid>
-                    <Grid item xs={12} marginBottom={8} sx={{paddingLeft: 8}}>
-                        <Typography variant="h6" fontWeight={600}>Lorem ipsum dolor sit amet consectetur.</Typography>
-                        <Typography color={'secondary'}>aaaaaaaaaaaaaaaaaaa</Typography>
-                        
-                    </Grid>
-                    <Grid item xs={12} marginBottom={8} sx={{paddingLeft: 8}}>
-                        <Typography variant="h6" fontWeight={600}>Lorem ipsum dolor sit amet consectetur.</Typography>
-                        <Typography color={'secondary'}>aaaaaaaaaaaaaaaaaaa</Typography>
-                        
-                    </Grid>
 
+                    <ScrollSpy des={{x:-20,y:0}} pos={300}>
+                        <Grid item xs={12} marginBottom={8} sx={{paddingLeft: 8}}>
+                            <Typography variant="h6" fontWeight={600}>Lorem ipsum dolor sit amet consectetur.</Typography>
+                            <Typography color={'secondary'}>aaaaaaaaaaaaaaaaaaa</Typography>
+                            
+                        </Grid>
+                    </ScrollSpy>
+                    <ScrollSpy des={{x:-20,y:0}} pos={350}>
+                        <Grid item xs={12} marginBottom={8} sx={{paddingLeft: 8}}>
+                            <Typography variant="h6" fontWeight={600}>Lorem ipsum dolor sit amet consectetur.</Typography>
+                            <Typography color={'secondary'}>aaaaaaaaaaaaaaaaaaa</Typography>
+                            
+                        </Grid>
+                    </ScrollSpy>
+                    <ScrollSpy des={{x:-20,y:0}} pos={400}>
+                    <Grid item xs={12} marginBottom={8} sx={{paddingLeft: 8}}>
+                        <Typography variant="h6" fontWeight={600}>Lorem ipsum dolor sit amet consectetur.</Typography>
+                        <Typography color={'secondary'}>aaaaaaaaaaaaaaaaaaa</Typography>
+                        
+                    </Grid>
+                    </ScrollSpy>
                 </Grid>
                 </Grid>
                 </Container>

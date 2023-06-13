@@ -9,6 +9,7 @@ import { Footer } from "../components/home/Footer";
 import { PriceData } from "../components/home/PriceData";
 import { GetStaticProps } from "next";
 import Head from "next/head";
+import Scrollspy from "../components/commons/ScrollSpy";
 
 interface Props {
     toggleTheme: any;
@@ -38,7 +39,6 @@ const Home: FC<Props> = ({ toggleTheme }) => {
               <PriceData />
 
             </section>
-
 
             <section id={"contact"}>
               <ContactData />

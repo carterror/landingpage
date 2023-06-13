@@ -16,6 +16,7 @@
     "@mui/material": "^5.11.0",
     "@mui/x-date-pickers": "^5.0.5",
     "@popperjs/core": "^2.11.6",
+    "@react-spring/web": "^9.7.2",
     "@reduxjs/toolkit": "^1.8.5",
     "axios": "^0.27.2",
     "emailjs": "^4.0.1",
