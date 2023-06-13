@@ -13,19 +13,22 @@ import { FreeMode, Pagination } from "swiper";
 
 import { PlaceCard } from "../cards/PlaceCard";
 import { carData } from "../../config/cardData";
-
-let text = "Nuestros guías de viaje te harán vivir una experiencia única e irrepetible. Descubre el Caribe auténtico, sus lugares escondidos y las leyendas locales que solo conocen los que viven en él .Te diseñaremos un viaje totalmente a tu medida, desde paquetes todo incluido a viajes personalizados hasta el mínimo detalle, en grupo reducido o en privado."
+import bgImage from '@/../../public/textura.png';
 
 export const DatesData = () => {
     const { t } = useTranslation()
 
     return (
         <>
-            <Grid container spacing={0} padding={15} sx={{backgroundColor: '#120f2e', color: "white"}}>
+            <Grid container spacing={0} padding={15} sx={{backgroundImage: `url('${bgImage.src}')`, backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',filter: 'contrast(1.3)',  color: "white"}}>
                 <Container>
-                <Grid container spacing={2} justifyContent="space-between" sx={{backgroundColor: '#120f2e', color: "white"}}>
-                <Grid item xs={12} md={6} display={'block'} sx={{borderRight: {xs: 'none', md: 'solid #ccc 2px'}, borderBottom: {xs: 'solid #ccc 2px', md: 'none'}, fontWeight: 800, fontSize: 40, paddingRight: 20, paddingBottom: 10, marginBottom: {xs: 10, md: 0} }}>
-                    Lorem, ipsum dolor sit amet consectetur  adipisicing elit!
+                <Grid container spacing={2} justifyContent="space-between" sx={{backgroundColor: '', color: "white"}}>
+                <Grid item xs={12} md={6} display={'block'} sx={{borderRight: {xs: 'none', md: 'solid #ccc 2px'}, borderBottom: {xs: 'solid #ccc 2px', md: 'none'}, fontWeight: 800, fontSize: 40, paddingRight: 10, paddingBottom: 10, marginBottom: {xs: 10, md: 0} }}>
+                    Lorem, ipsum dolor sit amet consectetur <Box bgcolor={'yellow'} color={'#120f2e'} display={'inline'} padding={0.5} borderRadius={'10px 0px 10px 0px'}>
+                                Prueba
+                            </Box> adipisicing elit!
                 </Grid>
                 <Grid item xs={12}  md={6}>
                     <Grid item xs={12} marginBottom={8} sx={{paddingLeft: 8}}>
@@ -48,30 +51,6 @@ export const DatesData = () => {
                 </Grid>
                 </Container>
             </Grid>
-            <Swiper
-                className="mySwiper"
-                loop={true}
-                modules={[FreeMode, Navigation, Pagination]}
-                freeMode={{enabled: true, sticky: true}}
-                navigation={true}
-                pagination={{clickable: true}}
-                breakpoints={{
-                    '@0.5': {
-                        slidesPerView: 2,
-                        },
-                    '@1.00': {
-                        slidesPerView: 3,
-                        },
-                    }}
-                >
-                {
-                carData.map((item, pos) => (
-                    <SwiperSlide key={item.id}>
-                        <PlaceCard viaje={item} />
-                    </SwiperSlide>
-                    ))
-                }
-            </Swiper>
         </>
     );
 };

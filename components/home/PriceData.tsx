@@ -8,8 +8,8 @@ export const PriceData = () => {
     const { t } = useTranslation();
 
     return (
-        <Grid xs={12} md={10} sx={{ py: 5, backgroundColor: "#008080" }} id="price">
-            <Container>
+        <Grid xs={12} md={10} sx={{ py: 5, backgroundColor: "", padding: 5 }} id="price">
+            
                 <Grid
                     container
                     spacing={2}
@@ -20,9 +20,12 @@ export const PriceData = () => {
                     <Grid item xs={12} sm={6}>
                         <Typography
                             variant="h4"
-                            color="white"
-                            sx={{ fontWeight: "900", fontStyle: "italic" }}>
-                            {t("Viajes a la medida")}
+                            color="black"
+                            sx={{ fontWeight: "900", fontStyle: "normal" }}>
+                            {t("Viajes a la medida ")} 
+                            <Typography variant='h4' sx={{ fontWeight: "750" }} bgcolor={'yellow'} display={'inline'} padding={'0px 20px'} borderRadius={'10px 0px 10px 0px'}>
+                                Prueba
+                            </Typography>
                         </Typography>
                     </Grid>
 
@@ -47,8 +50,37 @@ export const PriceData = () => {
                     </Grid>
                 </Grid>
 
+                <Grid container
+                    spacing={5}
+                    direction="row">
+                            <Grid item xs={12} sm={6}>
+                                <Typography variant="h3" fontWeight={600}>01</Typography>
+                                <Typography variant="body1" align="justify" fontWeight={600} color={'secondary'}>
+                                    <b>Lorem, ipsum dolor</b> sit amet consectetur adipisicing elit. Optio perspiciatis ut dolore eveniet repellat repellendus doloremque. Deleniti hic, cumque minima, amet in cum  ea qui.
+                                </Typography>
+                            </Grid>   
+                            <Grid item xs={12} sm={6}>
+                                <Typography variant="h3" fontWeight={600}>01</Typography>
+                                <Typography variant="body1" align="justify" fontWeight={600} color={'secondary'}>
+                                    <b>Lorem, ipsum dolor</b> sit amet consectetur adipisicing elit. Optio perspiciatis ut dolore eveniet repellat repellendus doloremque. Deleniti hic, cumque minima, amet in cum  ea qui.
+                                </Typography>
+                            </Grid>   
+                            <Grid item xs={12} sm={6}>
+                                <Typography variant="h3" fontWeight={600}>01</Typography>
+                                <Typography variant="body1" align="justify" fontWeight={600} color={'secondary'}>
+                                    <b>Lorem, ipsum dolor</b> sit amet consectetur adipisicing elit. Optio perspiciatis ut dolore eveniet repellat repellendus doloremque. Deleniti hic, cumque minima, amet in cum  ea qui.
+                                </Typography>
+                            </Grid>   
+                            <Grid item xs={12} sm={6}>
+                                <Typography variant="h3" fontWeight={600}>01</Typography>
+                                <Typography variant="body1" align="justify" fontWeight={600} color={'secondary'}>
+                                    <b>Lorem, ipsum dolor</b> sit amet consectetur adipisicing elit. Optio perspiciatis ut dolore eveniet repellat repellendus doloremque. Deleniti hic, cumque minima, amet in cum  ea qui.
+                                </Typography>
+                            </Grid>   
+
+                </Grid>
+
               
-            </Container>
         </Grid>
     );
 };

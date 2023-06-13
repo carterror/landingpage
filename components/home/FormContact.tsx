@@ -114,33 +114,6 @@ export const FormContact = () => {
                         </Grid>
 
                         <Grid item xs={12} sm={6}>
-                            <MobileDatePicker
-                                label={t("Date of Birth")}
-                                inputFormat="DD/MM/YYYY"
-                                closeOnSelect
-                                value={dob}
-                                onChange={(date) => {
-                                    setDob(date);
-                                }}
-                                maxDate={new Date()}
-                                renderInput={(params) => (
-                                    <TextField
-                                        {...params}
-                                        {...register("birthdate", {
-                                            required: true,
-                                        })}
-                                        fullWidth
-                                        size="small"
-                                        error={!!errors.birthdate}
-                                        helperText={
-                                            errors.birthdate ? t("Date of Birh is required") : ""
-                                        }
-                                    />
-                                )}
-                            />
-                        </Grid>
-
-                        <Grid item xs={12} sm={6}>
                             <TextField
                                 label={t("Email")}
                                 variant="outlined"
@@ -181,66 +154,6 @@ export const FormContact = () => {
                             />
                         </Grid>
 
-                        <Grid item xs={12} sm={6}>
-                            <TextField
-                                label={t("Passport")}
-                                variant="outlined"
-                                size="small"
-                                fullWidth
-                                {...register("passport", { required: true })}
-                                error={!!errors.passport}
-                                helperText={errors.passport ? t("Passport is required") : ""}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-
-                        <Autocomplete
-                                disablePortal
-                                id="cmbCategory"
-                                options={options}
-                                size="small"
-                                isOptionEqualToValue={(option, value) => option.id === value.id}
-                                renderInput={(params) => (
-                                    <TextField
-                                        {...params}
-                                        label={t("Select a category")}
-                                        {...register("category", {
-                                            required: true,
-                                        })}
-                                        fullWidth
-                                        error={!!errors.country}
-                                        helperText={errors.country ? t("Select a category") : ""}
-                                    />
-                                )}
-                            />
-                            
-                            
-                           {/*  <FormControl fullWidth>
-                                <InputLabel id="demo-simple-select-label">
-                                    {t("Select a category")}
-                                </InputLabel>
-                                <Select
-                                    labelId="demo-simple-select-label"
-                                    id="demo-simple-select"
-                                    value={category}
-                                    label={t("Select a category")}
-                                    onChange={(value) => setCategory(value.target.value)}>
-                                    <MenuItem
-                                        value={options[0].label}
-                                        className={styles.responsiveText}>
-                                        <div
-                                            style={{
-                                                overflow: "hidden",
-                                                textOverflow: "ellipsis",
-                                            }}>
-                                            {options[0].label}
-                                        </div>
-                                    </MenuItem>
-                                    <MenuItem value={options[1].label}>{options[1].label}</MenuItem>
-                                    <MenuItem value={options[2].label}>{options[2].label}</MenuItem>
-                                </Select>
-                            </FormControl> */}
-                        </Grid>
 
                         <Grid item xs={12}>
                             <TextField
@@ -260,7 +173,7 @@ export const FormContact = () => {
                                     color="secondary"
                                     size="large"
                                     type="submit"
-                                    sx={{ borderRadius: "20px", textTransform: "uppercase" }}
+                                    sx={{ textTransform: "uppercase" }}
                                     onClick={() => {}}>
                                     <SendRounded sx={{ mr: 1 }} />
                                     {t("Send")}
