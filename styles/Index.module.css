@@ -1,0 +1,61 @@
+.glass {
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.colorRed {
+  color: rgba(247, 4, 70) !important;
+}
+
+.colorBlue {
+  color: rgba(1, 1, 94, 1) !important;
+}
+
+.bgHome::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url("/habana.jpg"); */
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.bgInfoEvent {
+  background: rgb(1, 1, 94);
+  background: -moz-radial-gradient(circle, rgba(1, 1, 94, 1) 0%, rgba(253, 2, 72, 1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(1, 1, 94, 1) 0%, rgba(253, 2, 72, 1) 100%);
+  background: radial-gradient(circle, rgba(1, 1, 94, 1) 0%, rgba(253, 2, 72, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01015e", endColorstr="#fd0248", GradientType=1);
+}
+
+.scroll-div {
+  scroll-behavior: smooth;
+}
+
+.bgInfoContact {
+  background-color: #100E24;
+ 
+  
+}
+
+.redToBlue {
+  background: rgb(1,1,94);
+background: -moz-linear-gradient(245deg, rgba(1,1,94,1) 16%, rgba(253,2,72,1) 61%);
+background: -webkit-linear-gradient(245deg, rgba(1,1,94,1) 16%, rgba(253,2,72,1) 61%);
+background: linear-gradient(245deg, rgba(1,1,94,1) 16%, rgba(253,2,72,1) 61%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01015e",endColorstr="#fd0248",GradientType=1);
+}
+
+.responsiveText {
+  font-size: calc(0.75em + 1vmin);
+}
