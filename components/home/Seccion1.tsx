@@ -1,15 +1,10 @@
 import React from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import { useTranslation } from 'react-i18next'
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Parallax } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-// import required modules
-import { FreeMode, Pagination } from "swiper";
 
 import { PlaceCard } from "../cards/PlaceCard";
 import { carData } from "../../config/cardData";
@@ -18,7 +13,7 @@ import ScrollSpy from "../commons/ScrollSpy";
 
 
 
-export const DatesData = () => {
+export const Session1 = () => {
 
     return (
         <>
@@ -28,9 +23,10 @@ export const DatesData = () => {
                 <Container>
                 <Grid container spacing={2} justifyContent="space-between" sx={{backgroundColor: '', color: "white"}}>
                 <Grid item xs={12} md={6} display={'block'} sx={{borderRight: {xs: 'none', md: 'solid #ccc 2px'}, borderBottom: {xs: 'solid #ccc 2px', md: 'none'}, fontWeight: 800, fontSize: 40, paddingRight: 10, paddingBottom: 10, marginBottom: {xs: 10, md: 0} }}>
-                    Lorem, ipsum dolor sit amet consectetur <Box bgcolor={'yellow'} color={'#120f2e'} display={'inline'} padding={0.5} borderRadius={'10px 0px 10px 0px'}>
-                                Prueba
-                            </Box> adipisicing elit!
+                    Lorem, ipsum dolor sit amet consectetur 
+                    <Typography bgcolor={'yellow'} fontWeight={800} fontSize={40} color={'#120f2e'} sx={{ clipPath: 'polygon(100% 0%, 0% 15%, 0% 100%, 100% 85%)', display: 'inline-block', padding: 1}}> asdasd a </Typography>
+                 adipisicing elit!
+                            
                 </Grid>
                
                

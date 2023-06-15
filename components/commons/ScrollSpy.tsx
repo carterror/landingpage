@@ -53,7 +53,6 @@ export default function ScrollSpy({children, des = {x:0 , y:0}, pos = 0}: Props)
   return (
     <>
       <animated.div
-        onClick={handleClick}
           style={{
             ...springs,
           }}
