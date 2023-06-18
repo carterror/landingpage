@@ -73,7 +73,6 @@ export default function DrawerAppBar(props: Props) {
 
           <Grid
             container
-            direction="row"
             justifyContent="space-between"
             alignItems="center"
           >
@@ -88,7 +87,7 @@ export default function DrawerAppBar(props: Props) {
               </Typography>
             </Grid>
             
-            <Grid item spacing={5} sx={{ display: { xs: 'none', sm: 'none', md: 'block'} }}>
+            <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block'} }}>
               {navItems.map((item) => (
                 <Link key={item} href="#" underline="none" sx={{marginX: 1, '&:hover': {
                   color: '#CCC',

@@ -42,9 +42,8 @@ const Home: FC<Props> = ({ toggleTheme }) => {
 
             </section>
 
-            <section id={"contact"}>
+            <section id={"contact"} >
               <ContactData />
-
             </section>
 
            

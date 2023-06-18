@@ -8,60 +8,13 @@ export const ContactData = () => {
     const { t } = useTranslation()
 
     return (
-        <Grid xs={12} sx={{ py: 3 }} id="contact">
+        <Grid xs={12} sx={{ py: 0, height: 300 }} id="contact" position={'relative'} top={50} zIndex={100}>
             <Container>
-                <Grid container >
-                    <Grid item md={5}>
-                        <Paper sx={{ p: 1 }} elevation={0} >
+                <Grid container justifyContent={'center'}>
 
-                            <Typography variant="h5" color="primary" sx={{ mb: 3, fontWeight:900 }}>{t('Contact Information')}</Typography>
-                            <nav aria-label="main mailbox folders">
-                                <List>
-                                    <ListItem disablePadding>
-                                        <ListItemButton LinkComponent={'a'} href='mailto:etravelbojorquez@gmail.com'>
-                                            <ListItemIcon >
-                                                <MailOutline />
-                                            </ListItemIcon>
-                                            <ListItemText primary="etravelbojorquez@gmail.com" color='primary' />
-                                        </ListItemButton>
-                                    </ListItem>
-
-                                   {/*  <ListItem disablePadding>
-                                        <ListItemButton LinkComponent={'a'} href='https://www.instagram.com/etravelbojorquez'>
-                                            <ListItemIcon>
-                                                <Instagram />
-                                            </ListItemIcon>
-                                            <ListItemText primary="Etravel Bojorquez" color='primary' />
-                                        </ListItemButton>
-                                    </ListItem>
-
-                                    <ListItem disablePadding>
-                                        <ListItemButton LinkComponent={'a'} href='https://www.facebook.com/etravelbojorquez'>
-                                            <ListItemIcon>
-                                                <Facebook />
-                                            </ListItemIcon>
-                                            <ListItemText primary="Etravel Bojorquez" color='primary' />
-                                        </ListItemButton>
-                                    </ListItem> */}
-
-                              {/*       <ListItem disablePadding>
-                                        <ListItemButton LinkComponent={'a'} href='https://www.havanaskatemarathon.com'>
-                                            <ListItemIcon>
-                                                <Public />
-                                            </ListItemIcon>
-                                            <ListItemText primary="www.havanaskatemarathon.com Online soon" color='primary' />
-                                        </ListItemButton>
-                                    </ListItem>
- */}
-
-                                </List>
-                            </nav>
-
-                        </Paper>
-                    </Grid>
 
                     <Grid item md={7}>
-                        <Paper sx={{ p: 1 }} elevation={3} >
+                        <Paper sx={{ p: 3, borderRadius: 0 }} elevation={3} >
                         <FormContact /> 
                         </Paper>
                     </Grid>
