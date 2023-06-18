@@ -1,14 +1,10 @@
 
 import { FC } from "react";
 import { ShopLayout } from "../components/layouts";
-import { InitialData } from "../components/home/InitialData";
-import { DatesData } from "../components/home/DatesData";
-import { Announcement } from "../components/home/Announcement";
+
 import { ContactData } from "../components/home/ContactData";
-import { Footer } from "../components/home/Footer";
-import { PriceData } from "../components/home/PriceData";
-import { GetStaticProps } from "next";
 import Head from "next/head";
+import { Banner, Session1, Session2, Session3, Session4 } from "../components/home";
 
 interface Props {
     toggleTheme: any;
@@ -20,25 +16,31 @@ const Home: FC<Props> = ({ toggleTheme }) => {
         <ShopLayout title="Etravel Bojorquez" 
         pageDescription="Descubre el Caribe auténtico, sus lugares escondidos y las leyendas locales que solo conocen los que viven en él." 
         toggleTheme={toggleTheme} imageFullUrl="/logo2.jpg">
+          
           <Head>
             <meta name="keywords" content="sadasdsa" />
           </Head>
-            <section id={"home"}>
-                <InitialData />
+
+            <section id={"Banner"}>
+                <Banner/>
             </section>
 
-            <section id={"date"}>
-                <DatesData />
+            <section id={"Session1"}>
+                <Session1 />
             </section>
 
-           {/*  <section id={"announcement"}>
-                <Announcement />
-            </section> */}
-            <section id={"price"}>
-              <PriceData />
+            <section id={"Session2"}>
+                <Session2 />
+            </section>
+            
+            <section id={"Session3"}>
+              <Session3 />
 
             </section>
+            <section id={"Session4"}>
+              <Session4 />
 
+            </section>
 
             <section id={"contact"}>
               <ContactData />
@@ -51,12 +53,4 @@ const Home: FC<Props> = ({ toggleTheme }) => {
     );
 };
 
-// export const getStaticProps: GetStaticProps = async (/* { locale } */) => {
-//     return {
-//       props: {
-//         /* ...(await serverSideTranslations(locale || defaultLanguage, ["common"])), */
-//       },
-//     };
-//   };
-  
 export default Home;

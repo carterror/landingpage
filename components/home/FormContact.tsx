@@ -48,8 +48,8 @@ export const FormContact = () => {
     const onSubmit = (data: any) => {
         console.log(data);
          setOpenD(true);
-
-        emailjs.send("service_3lp2ayt", "template_jec1b4o", data, "FDUZ9tJ2LqrLT120R").then(
+          
+        emailjs.send("service_alzwbq7", "template_f4s13cv", data, "GwC1u-sKz__UPmSdE").then(
             (response) => {
                 console.log("SUCCESS!", response.status, response.text);
                 setType("success");

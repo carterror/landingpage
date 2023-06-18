@@ -1,14 +1,15 @@
 import React from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, Container, Grid, Theme, Typography } from "@mui/material";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import styles from "../../styles/Index.module.css";
 
-export const PriceData = () => {
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+
+export const Session3 = () => {
     const { t } = useTranslation();
 
     return (
-        <Grid xs={12} md={10} sx={{ py: 5, backgroundColor: "", padding: 5 }} id="price">
+        <Grid xs={12} md={10} my={5} sx={{ px: 5 }} id="price">
             
                 <Grid
                     container
@@ -21,11 +22,15 @@ export const PriceData = () => {
                         <Typography
                             variant="h4"
                             color="black"
-                            sx={{ fontWeight: "900", fontStyle: "normal" }}>
+                            sx={{ fontWeight: "800", fontStyle: "normal" }}>
                             {t("Viajes a la medida ")} 
-                            <Typography variant='h4' sx={{ fontWeight: "750" }} bgcolor={'yellow'} display={'inline'} padding={'0px 20px'} borderRadius={'10px 0px 10px 0px'}>
+                            {/* <Box component={'polygon'} points="0,100 50,00, 100,100" variant='h4' sx={{ fontWeight: "750" }} bgcolor={'yellow'} display={'inline'} padding={'0px 20px'} borderRadius={'10px 0px 10px 0px'}>
                                 Prueba
-                            </Typography>
+                            </Box> */}
+                           <Typography color={'black'} fontWeight={800} variant='h4' padding={1} bgcolor={'yellow'} sx={{ clipPath: 'polygon(100% 0%, 0% 15%, 0% 100%, 100% 85%)', display: 'inline-block'}}> asdasd a </Typography>
+              
+                            
+                            
                         </Typography>
                     </Grid>
 
@@ -33,16 +38,24 @@ export const PriceData = () => {
                         <Box
                             sx={{
                                 display: "flex",
-                                flexFlow: "column",
-                                justifyContent: "flex-end",
+                            
+                                justifyContent: "end",
+                                alignContent: 'end',
                                 textAlign: "end",
+                                
                             }}>
-                            <Typography
-                                variant="h5"
-                                color="white"
-                                sx={{ fontWeight: "900" }}>
-                                {t("Disfruta de tu viaje personalizado")}
-                            </Typography>
+                                <Card elevation={1} sx={{ textAlign: 'left', borderRadius: 0, minWidth: 200, maxWidth: 400 }} >
+                                    <FormatQuoteIcon sx={{backgroundColor: "black", color: "white"}}/>
+                                    <CardContent>
+                                        <Typography fontWeight={700} variant="body1" color="text.secondary" gutterBottom>
+                                        Word of the Day meaning and kindly.
+                                        </Typography>
+                                        <hr />
+                                        <Typography fontWeight={700} variant="body1">
+                                        well las
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
                            {/*  <Typography variant="h4" color="white" sx={{ fontWeight: "600" }}>
                                 80.00 EU
                             </Typography> */}

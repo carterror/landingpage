@@ -1,12 +1,12 @@
 import Head from "next/head"
-import { FC } from "react"
+import { FC, ReactNode } from 'react';
 import { Footer } from "../home/Footer";
 import { SideMenu } from "../ui";
 import Navbar from "../ui/Navbar";
 
 
 interface Props {
-  children:any;
+  children: ReactNode [];
   title: string;
   pageDescription: string;
   imageFullUrl?: string;
@@ -39,7 +39,7 @@ export const ShopLayout:FC<Props> = ({children, title, pageDescription, imageFul
        /*  margin: '80px auto',
         maxWidth: '1440px',
         padding: '0px 30px' */
-
+        backgroundColor: '#e3e0e0',
         scrollBehavior: 'smooth'
 
       }}>
@@ -49,7 +49,7 @@ export const ShopLayout:FC<Props> = ({children, title, pageDescription, imageFul
       
 
       <footer>
-      <Footer />
+        <Footer />
       </footer>
 
     </>
