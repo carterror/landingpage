@@ -68,15 +68,10 @@ export const FormContact = () => {
         );
     };
 
-    const options = [
-        { label: t("Viaje Solo"), id: 1 },
-        { label: t("Viaje en Pareja"), id: 2 },
-        { label: t("Viaje en Familia"), id: 3 },
-    ];
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <Grid container spacing={0} display="flex" justifyContent={"center"}>
+            <Grid container display="flex" zIndex={100} justifyContent={"center"}>
                 <Grid item xs={12} md={10} lg={10}>
                     <Typography
                         variant="h5"
@@ -173,7 +168,7 @@ export const FormContact = () => {
                                     color="secondary"
                                     size="large"
                                     type="submit"
-                                    sx={{ textTransform: "uppercase" }}
+                                    sx={{ textTransform: "uppercase", backgroundColor: '#120f2e' }}
                                     onClick={() => {}}>
                                     <SendRounded sx={{ mr: 1 }} />
                                     {t("Send")}

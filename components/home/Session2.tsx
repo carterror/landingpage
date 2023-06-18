@@ -45,7 +45,7 @@ export const Session2 = () => {
             <Card sx={{borderRadius: 0}}>
                 <CardMedia
                   component="img"
-                  height="500"
+                  height="100%"
                   image="/0.jpg"
                   alt="green iguana"
                 />
