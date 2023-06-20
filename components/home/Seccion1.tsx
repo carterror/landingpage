@@ -17,9 +17,10 @@ export const Session1 = () => {
 
     return (
         <>
-            <Grid container spacing={0} padding={15} sx={{backgroundImage: `url('${bgImage.src}')`, backgroundSize: 'cover',
+            <Grid container spacing={0} sx={{backgroundImage: `url('${bgImage.src}')`, backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',filter: 'contrast(1.3)',  color: "white"}}>
+                backgroundRepeat: 'no-repeat',filter: 'contrast(1.3)',  color: "white",
+                padding: {xs: 5, md: 15}}}>
                 <Container>
                 <Grid container spacing={2} justifyContent="space-between" sx={{backgroundColor: '', color: "white"}}>
                 <Grid item xs={12} md={6} display={'block'} sx={{borderRight: {xs: 'none', md: 'solid #ccc 2px'}, borderBottom: {xs: 'solid #ccc 2px', md: 'none'}, fontWeight: 800, paddingRight: 10, paddingBottom: 10, marginBottom: {xs: 10, md: 0} }}>

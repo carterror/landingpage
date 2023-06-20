@@ -32,7 +32,7 @@ export const Banner = () => {
                 </Box>
                 </Grid>
           </Grid>
-          <Grid item xs={12} md={6} display="flex" justifyContent={"end"} >
+          <Grid item xs={0} md={6} display="flex" justifyContent={"end"} >
           <Card sx={{borderRadius: 0, clipPath: {md: 'polygon(100% 0%,10% 15%, 0% 100%, 100% 100%)'}}} >
 
           <CardMedia

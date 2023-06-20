@@ -1,5 +1,5 @@
 import { Facebook, Instagram, MailOutline, Public } from '@mui/icons-material';
-import { Grid, Paper, Typography, Container, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import { Grid, Paper, Typography, Container, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Box } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { FormContact } from './FormContact';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
@@ -19,7 +19,10 @@ export const ContactData = () => {
                     
                         <Paper sx={{borderRadius: 0 }} elevation={3} >
                         <FormatQuoteIcon sx={{backgroundColor: "black", color: "white"}} />
+                        <Box padding={1}>
+
                         <FormContact /> 
+                        </Box>
                         </Paper>
                     </Grid>
                 </Grid>
