@@ -1,4 +1,4 @@
-import { EmailRounded, Facebook, Instagram, Phone, Twitter } from "@mui/icons-material";
+import { EmailRounded, Facebook, FacebookTwoTone, Instagram, Phone, Twitter } from "@mui/icons-material";
 import {
     Chip,
     Container,
@@ -20,6 +20,8 @@ import NextLink from "next/link";
 import bgImage from '../../public/textura.png';
 
 import styles from "../../styles/Index.module.css";
+import botonRedes from "../../styles/botonredes.module.css";
+import ShareIcon from '@mui/icons-material/Share';
 
 export const Footer = () => {
     return (
@@ -91,13 +93,12 @@ export const Footer = () => {
                         </Grid>
                     </Grid>
 
-                    <Grid container xs={12} justifyContent="left"
-                                alignItems="left"
-                                alignContent="left"
+                    <Grid container xs={12} justifyContent="space-between"
+                                alignContent="space-between"
                                 padding={'30px 10px'}>
                         
                             <Grid item
-                                xs={10}                   
+                                xs={9}                   
                                 
                                 >
                                 <Grid item xs={12} md={6} lg={4}>
@@ -109,18 +110,20 @@ export const Footer = () => {
                                 
                                
                             </Grid>
-                            <Grid item xs={2}>
-                                        <IconButton>
-                                            <Facebook sx={{ color: "#fff" }} />
-                                        </IconButton>
-
-                                        <IconButton>
-                                            <Instagram sx={{ color: "#fff" }} />
-                                        </IconButton>
-
-                                            <IconButton>
-                                            <Twitter color="inherit" sx={{ color: "#fff" }} />
-                                        </IconButton>
+                            <Grid item xs={3} justifyContent="end" display={"flex"}
+                            alignItems={'end'}
+                                alignContent="end">
+                            <button className={botonRedes['btn-cssbuttons']} >
+                            <span>Redes</span>
+                            <ul>
+                            <li>
+                            <a href="https://twitter.com/SumethWrrn"><FacebookTwoTone sx={{color: 'white'}} /></a>
+                            </li>
+                            <li>
+                            <a href="https://codepen.io/sharpth"><Instagram sx={{color: 'white'}} /></a>
+                            </li>
+                            <li>
+                            <a href="https://github.com/SharpTH"><FacebookTwoTone sx={{color: 'white'}} /></a></li></ul></button>
                                 </Grid>
                     </Grid>
                 </Grid>

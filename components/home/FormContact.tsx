@@ -18,7 +18,7 @@ import {
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { SendRounded } from "@mui/icons-material";
+import { BorderAll, SendRounded } from "@mui/icons-material";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { MobileDatePicker } from "@mui/x-date-pickers";
@@ -80,6 +80,7 @@ export const FormContact = () => {
                         sx={{ fontWeight: "900" }}>
                         {t("Formulario de Contacto")}
                     </Typography>
+                    <hr />
                     <Grid container spacing={2} sx={{ pt: 4 }}>
                         <Grid item xs={12} sm={6}>
                             <TextField
