@@ -48,6 +48,7 @@ export const Session4 = () => {
           <CardMedia
                   component="img"
                   height="100%"
+                  sx={{minHeight: 300}}
                   image="/0.jpg"
                   alt="green iguana"
                 />

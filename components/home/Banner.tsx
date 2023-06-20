@@ -20,7 +20,7 @@ export const Banner = () => {
         <Grid container spacing={2} display="flex" justifyContent={"space-between"} paddingY={10}>
           <Grid item xs={12} md={6} display="flex" justifyContent={"end"}>
             <Grid item xs={12} paddingY={5} paddingX={5}>
-                <Typography fontSize={50} fontWeight={900} >
+                <Typography fontSize={50} fontWeight={900} sx={{fontSize:{xs: 35}}}>
                   Grow, Manage and pay your temp workforce
                 </Typography>
                 <Typography fontSize={20} color='secondary' fontWeight={600} marginTop={2}>
@@ -33,12 +33,13 @@ export const Banner = () => {
                 </Grid>
           </Grid>
           <Grid item xs={0} md={6} display="flex" justifyContent={"end"} >
-          <Card sx={{borderRadius: 0, clipPath: {md: 'polygon(100% 0%,10% 15%, 0% 100%, 100% 100%)'}}} >
+          <Card sx={{borderRadius: 0, clipPath: 'polygon(100% 0%,10% 15%, 0% 100%, 100% 100%)'}} >
 
           <CardMedia
                   component="img"
                   // width="100%"
                   height="100%"
+                  sx={{minHeight: 300}}
                   image="/0.jpg"
                   alt="green iguana"
                 />

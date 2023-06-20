@@ -1,13 +1,9 @@
 import React from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import Image from "next/image";
+import {Container, Grid, Typography } from "@mui/material";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
-import { PlaceCard } from "../cards/PlaceCard";
-import { carData } from "../../config/cardData";
 import bgImage from '@/../../public/textura.png';
 import ScrollSpy from "../commons/ScrollSpy";
 
@@ -24,8 +20,8 @@ export const Session1 = () => {
                 <Container>
                 <Grid container spacing={2} justifyContent="space-between" sx={{backgroundColor: '', color: "white"}}>
                 <Grid item xs={12} md={6} display={'block'} sx={{borderRight: {xs: 'none', md: 'solid #ccc 2px'}, borderBottom: {xs: 'solid #ccc 2px', md: 'none'}, fontWeight: 800, paddingRight: 10, paddingBottom: 10, marginBottom: {xs: 10, md: 0} }}>
-                    <Typography variant="h3"> Lorem, ipsum dolor sit amet consectetur 
-                    <Typography bgcolor={'yellow'} fontWeight={800} variant="h3" color={'#120f2e'} sx={{ clipPath: 'polygon(100% 0%, 0% 15%, 0% 100%, 100% 85%)', display: 'inline-block', padding: 1}}> asdasd a </Typography>
+                    <Typography variant="h3" sx={{fontSize:{xs: 35, md:50}}}> Lorem, ipsum dolor sit amet consectetur 
+                    <Typography bgcolor={'yellow'} fontWeight={800} variant="h3" color={'#120f2e'} sx={{ clipPath: 'polygon(100% 0%, 0% 15%, 0% 100%, 100% 85%)', display: 'inline-block', padding: 1, fontSize:{xs: 35, md:50}}}> asdasd a </Typography>
                  adipisicing elit!</Typography>
                             
                 </Grid>

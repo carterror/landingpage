@@ -1,27 +1,15 @@
 import { EmailRounded, Facebook, FacebookTwoTone, Instagram, Phone, Twitter } from "@mui/icons-material";
 import {
-    Chip,
-    Container,
     Grid,
-    Paper,
     Stack,
     Typography,
     Box,
-    Link,
-    TextField,
-    Button,
-    Divider,
-    IconButton,
-    InputAdornment,
 } from "@mui/material";
-import Image from "next/image";
 import React from "react";
-import NextLink from "next/link";
 import bgImage from '../../public/textura.png';
 
 import styles from "../../styles/Index.module.css";
 import botonRedes from "../../styles/botonredes.module.css";
-import ShareIcon from '@mui/icons-material/Share';
 
 export const Footer = () => {
     return (
@@ -98,8 +86,8 @@ export const Footer = () => {
                                 padding={'30px 10px'}>
                         
                             <Grid item
-                                xs={9}                   
-                                
+                                xs={12}                   
+                                md={9}
                                 >
                                 <Grid item xs={12} md={6} lg={4}>
                                     <Typography variant="caption" color="white">
@@ -110,9 +98,9 @@ export const Footer = () => {
                                 
                                
                             </Grid>
-                            <Grid item xs={3} justifyContent="end" display={"flex"}
+                            <Grid item xs={12} md={3} justifyContent={"end"} display={"flex"}
                             alignItems={'end'}
-                                alignContent="end">
+                                alignContent="end" sx={{padding: {xs: 2}}}>
                             <button className={botonRedes['btn-cssbuttons']} >
                             <span>Redes</span>
                             <ul>
