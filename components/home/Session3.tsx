@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Card, CardContent, Container, Grid, Theme, Typography } from "@mui/material";
+import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 

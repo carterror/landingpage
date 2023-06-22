@@ -97,7 +97,7 @@ export default function DrawerAppBar(props: Props) {
               ))}
             </Grid>
 
-            <Grid item sx={{ display: { xs: 'block', sm: 'block', md: 'block'} }}>
+            <Grid item sx={{ display: { xs: 'none', sm: 'block', md: 'block'} }}>
              
                 <Button sx={{ marginX: 1 }} color='warning' endIcon={<SendIcon />}>
                   Hire Works

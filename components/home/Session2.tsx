@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material'
+import { Card, CardMedia, Grid, Typography } from '@mui/material'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from "../../styles/Index.module.css";
@@ -8,19 +8,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import 'swiper/css/effect-fade';
-import Image from 'next/image';
-import ShareIcon from '@mui/icons-material/Share';
 
 
 export const Session2 = () => {
 
   const { t } = useTranslation()
-  const images = [
-    "/0.jpg",
-    "/1.jpg",
-    "/2.jpg",
-  
-  ];
 
   return (
     <Grid className={styles.bgHome}>
@@ -32,7 +24,7 @@ export const Session2 = () => {
               
               <Typography fontWeight={800} variant='body2' marginTop={5} marginBottom={3}> asdasd a </Typography>
 
-                <Typography variant='h3' fontWeight={900} marginBottom={5}>
+                <Typography variant='h3' fontWeight={900} marginBottom={5} sx={{fontSize:{xs: 35}}}>
                   Grow, Manage and pay your temp workforce
                 </Typography>
                 <Typography variant='body1' color='secondary' fontWeight={600} marginTop={2}>
@@ -46,6 +38,7 @@ export const Session2 = () => {
                 <CardMedia
                   component="img"
                   height="100%"
+                  sx={{minHeight: 300}}
                   image="/0.jpg"
                   alt="green iguana"
                 />
