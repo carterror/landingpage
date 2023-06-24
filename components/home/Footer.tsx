@@ -102,7 +102,7 @@ export const Footer = () => {
                             alignItems={'end'}
                                 alignContent="end" sx={{padding: {xs: 2}}}>
                             <button className={botonRedes['btn-cssbuttons']} >
-                            <span>Redes</span>
+                            <span>Redes Sociales</span>
                             <ul>
                             <li>
                             <a href="https://twitter.com/SumethWrrn"><FacebookTwoTone sx={{color: 'white'}} /></a>
