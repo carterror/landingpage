@@ -31,19 +31,22 @@ export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const handleDrawerToggle = () => {
+  const handleDrawerToggle = async() => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const scrollTo = (ev: any, loc: string) => {
+  const scrollTo = async (ev: any, loc: string) => {
     ev.preventDefault();
-    document.getElementById(loc).scrollIntoView({
+    await handleDrawerToggle()
+    document.getElementById(loc)!.scrollIntoView({
       behavior: 'smooth'
     });
+
+    
   }
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         MUI
       </Typography>
