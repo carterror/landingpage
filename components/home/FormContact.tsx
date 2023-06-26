@@ -85,7 +85,7 @@ export const FormContact = () => {
                         <Grid item xs={12} sm={6}>
                             <TextField
                                 label={t("First name")}
-                                variant="outlined"
+                                variant="standard"
                                 fullWidth
                                 size="small"
                                 {...register("firstname", {
@@ -98,7 +98,7 @@ export const FormContact = () => {
                         <Grid item xs={12} sm={6}>
                             <TextField
                                 label={t("Last name")}
-                                variant="outlined"
+                                variant="standard"
                                 fullWidth
                                 size="small"
                                 {...register("lastname", {
@@ -112,7 +112,7 @@ export const FormContact = () => {
                         <Grid item xs={12} sm={6}>
                             <TextField
                                 label={t("Email")}
-                                variant="outlined"
+                                variant="standard"
                                 fullWidth
                                 size="small"
                                 {...register("email", {
@@ -134,9 +134,10 @@ export const FormContact = () => {
                                 disablePortal
                                 id="combo-box-demo"
                                 options={countries}
-                                size="small"
+                                size="medium"
                                 renderInput={(params) => (
                                     <TextField
+                                        variant="standard"
                                         {...params}
                                         label={t("Country")}
                                         {...register("country", {
@@ -153,9 +154,9 @@ export const FormContact = () => {
 
                         <Grid item xs={12}>
                             <TextField
-                                id="outlined-multiline-static"
+                                id="standard-multiline-static"
                                 label={t("Comments")}
-                                variant="outlined"
+                                variant="standard"
                                 fullWidth
                                 multiline
                                 rows={2}

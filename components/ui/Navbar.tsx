@@ -25,7 +25,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['For companies', 'For workers', 'About us', 'Contact'];
+const navItems = [['For companies', 'Session1'], ['For workers', 'Session2'], ['About us', 'Session3'], ['Contact', 'contact']];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -34,6 +34,13 @@ export default function DrawerAppBar(props: Props) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  const scrollTo = (ev: any, loc: string) => {
+    ev.preventDefault();
+    document.getElementById(loc).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -44,9 +51,9 @@ export default function DrawerAppBar(props: Props) {
       
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+          <ListItem key={item[0]}  disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} onClick={(ev) => scrollTo(ev, item[1])}>
+              <ListItemText primary={item[0]} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -89,10 +96,10 @@ export default function DrawerAppBar(props: Props) {
             
             <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block'} }}>
               {navItems.map((item) => (
-                <Link key={item} href="#" underline="none" sx={{marginX: 1, '&:hover': {
+                <Link key={item[0]} href='#' onClick={(ev) => scrollTo(ev, item[1])} underline="none" sx={{marginX: 1, '&:hover': {
                   color: '#CCC',
                 }}}>
-                  {item}
+                  {item[0]}
                 </Link>
               ))}
             </Grid>

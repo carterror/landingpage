@@ -1,5 +1,4 @@
 import { useSpring, animated } from '@react-spring/web'
-import { ReferenceObject } from 'popper.js';
 import { useEffect, useState, useRef, ReactNode } from 'react';
 
 interface Props {

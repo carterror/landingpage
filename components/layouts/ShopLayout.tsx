@@ -1,8 +1,8 @@
 import Head from "next/head"
 import { FC, ReactNode } from 'react';
 import { Footer } from "../home/Footer";
-import { SideMenu } from "../ui";
 import Navbar from "../ui/Navbar";
+import ScrollTopButton from "../commons/ScrollTopButton";
 
 
 interface Props {
@@ -14,6 +14,9 @@ interface Props {
 }
 
 export const ShopLayout:FC<Props> = ({children, title, pageDescription, imageFullUrl, toggleTheme }) => {
+
+
+
   return (
     <>
       <Head>
@@ -33,8 +36,6 @@ export const ShopLayout:FC<Props> = ({children, title, pageDescription, imageFul
         <Navbar />
       </nav>
 
-      <SideMenu/>
-
       <main style={{
        /*  margin: '80px auto',
         maxWidth: '1440px',
@@ -51,7 +52,7 @@ export const ShopLayout:FC<Props> = ({children, title, pageDescription, imageFul
       <footer>
         <Footer />
       </footer>
-
+      <ScrollTopButton />
     </>
   )
 }
