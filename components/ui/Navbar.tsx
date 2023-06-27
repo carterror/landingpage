@@ -35,9 +35,13 @@ export default function DrawerAppBar(props: Props) {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const handleDrawer = async() => {
+    setMobileOpen(false);
+  };
+
   const scrollTo = async (ev: any, loc: string) => {
     ev.preventDefault();
-    await handleDrawerToggle()
+    await handleDrawer()
     document.getElementById(loc)!.scrollIntoView({
       behavior: 'smooth'
     });
@@ -67,7 +71,7 @@ export default function DrawerAppBar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Grid sx={{ display: 'flex'  }}>
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar sx={{bgcolor: 'white', color: 'black', fontWeight: 600, fontSize: 15}}>
@@ -139,6 +143,6 @@ export default function DrawerAppBar(props: Props) {
           {drawer}
         </Drawer>
       </Box>
-    </Box>
+    </Grid>
   );
 }
