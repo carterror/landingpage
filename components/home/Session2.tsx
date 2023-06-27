@@ -32,7 +32,7 @@ export const Session2 = () => {
                 </Typography>
                 </Grid>
           </Grid>
-          <Grid item xs={12} md={6}  padding={2} display="flex" justifyContent={"end"}>
+          <Grid item xs={12} md={6} display="flex" justifyContent={"end"}>
 
             <Card sx={{borderRadius: 0}}>
                 <CardMedia

@@ -1,4 +1,4 @@
-import { EmailRounded, Facebook, FacebookTwoTone, Instagram, Phone, Twitter } from "@mui/icons-material";
+import { EmailRounded, Facebook, FacebookTwoTone, Instagram, Phone, Share, Twitter } from "@mui/icons-material";
 import {
     Grid,
     Stack,
@@ -81,16 +81,15 @@ export const Footer = () => {
                         </Grid>
                     </Grid>
 
-                    <Grid container xs={12} justifyContent="space-between"
-                                alignContent="space-between"
-                                padding={'30px 10px'}>
+                    <Grid container xs={12} direction="row"
+  justifyContent="space-between"
+  alignItems="center">
                         
                             <Grid item
-                                xs={12}                   
-                                md={9}
+                                
                                 >
                                 <Grid item xs={12} md={6} lg={4}>
-                                    <Typography variant="caption" color="white">
+                                    <Typography variant="caption" color="white" noWrap>
                                         © ETravel Bojorquez {new Date().getFullYear()}. All right
                                         reserved
                                     </Typography>
@@ -98,11 +97,10 @@ export const Footer = () => {
                                 
                                
                             </Grid>
-                            <Grid item xs={12} md={3} justifyContent={"end"} display={"flex"}
-                            alignItems={'end'}
-                                alignContent="end" sx={{padding: {xs: 2}}}>
+                            <Grid item  sx={{padding: {xs: 2}}}>
                             <button className={botonRedes['btn-cssbuttons']} >
-                            <span>Redes Sociales</span>
+                            <span>Redes  </span>
+                            <span><Share sx={{fontSize: 20}} /></span>
                             <ul>
                             <li>
                             <a href="https://twitter.com/SumethWrrn"><FacebookTwoTone sx={{color: 'white'}} /></a>

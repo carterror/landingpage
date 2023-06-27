@@ -17,6 +17,21 @@ export default function ScrollSpy({children, des = {x:0 , y:0}, pos = 0}: Props)
   const sectionRef = useRef<any>();
 
   useEffect(() => {
+    const handleClick = () => {
+      // console.log(springs);
+      
+      api.start({
+        from: {
+          opacity: 0,
+          x: des.x,
+        },
+        to: {
+          x: des.y,
+          opacity: 1,
+        },
+      })
+    }
+
     if(transi){
 
       const handleScroll = () => {
@@ -32,22 +47,7 @@ export default function ScrollSpy({children, des = {x:0 , y:0}, pos = 0}: Props)
       // console.log(sectionPosition);
     }
 
-  }, [scrollPosition,transi]);
-
-  const handleClick = () => {
-    // console.log(springs);
-    
-    api.start({
-      from: {
-        opacity: 0,
-        x: des.x,
-      },
-      to: {
-        x: des.y,
-        opacity: 1,
-      },
-    })
-  }
+  }, [scrollPosition,transi,api,pos,des]);
 
   return (
     <>
