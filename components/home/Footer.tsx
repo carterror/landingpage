@@ -1,4 +1,4 @@
-import { EmailRounded, Facebook, FacebookTwoTone, Instagram, Phone, Twitter } from "@mui/icons-material";
+import { EmailRounded, Facebook, FacebookTwoTone, Instagram, Phone, Share, Twitter } from "@mui/icons-material";
 import {
     Grid,
     Stack,
@@ -99,7 +99,8 @@ export const Footer = () => {
                             </Grid>
                             <Grid item  sx={{padding: {xs: 2}}}>
                             <button className={botonRedes['btn-cssbuttons']} >
-                            <span>Redes</span>
+                            <span>Redes  </span>
+                            <span><Share sx={{fontSize: 20}} /></span>
                             <ul>
                             <li>
                             <a href="https://twitter.com/SumethWrrn"><FacebookTwoTone sx={{color: 'white'}} /></a>
