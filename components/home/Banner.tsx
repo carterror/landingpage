@@ -27,7 +27,7 @@ export const Banner = () => {
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quas magnam blanditiis accusamus qui laudantium expedita nesciunt eveniet.
                 </Typography>
                 <Box paddingTop={4}>
-                  <Grid display={'flex'} sx={{flexDirection: {lg: 'row', md: 'column', sm: 'row', xs: 'column'}}}>
+                  <Grid display={'flex'} sx={{flexDirection: {lg: 'row', md: 'column', sm: 'row', xs: 'column', maxWidth:'80%'}}}>
                     <Button color='secondary' fullWidth sx={{fontSize: 20, paddingX: 2, paddingY: 1, marginRight: 2, backgroundColor: '#120f2e'}} endIcon={<ShareIcon />}>Get in touch</Button>
                     <Button variant='outlined' fullWidth color='secondary' sx={{fontSize: 20, paddingX: 2, paddingY: 1, fontWeight: 600, borderColor: '#120f2e', color: '#120f2e', marginTop: {lg: 0, md: 1, sm: 0, xs: 1}}}>Call: 55016899</Button>
                   </Grid>
