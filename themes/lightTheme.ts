@@ -47,8 +47,16 @@ export const lightTheme = createTheme(theme , {
           [theme.breakpoints.up('md')]: {
             fontSize: '4.5rem',
           },
-        }
-        
+        },
+        h3: {
+          wordWrap: 'break-word'
+        },
+        h4: {
+          wordWrap: 'break-word'
+        },
+        body1: {
+          wordWrap: 'break-word'
+        },
       }
     }, 
 

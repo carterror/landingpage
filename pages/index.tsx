@@ -5,6 +5,7 @@ import { ShopLayout } from "../components/layouts";
 import { ContactData } from "../components/home/ContactData";
 import Head from "next/head";
 import { Banner, Session1, Session2, Session3, Session4 } from "../components/home";
+import {Grid} from "@mui/material";
 
 interface Props {
     toggleTheme: any;
