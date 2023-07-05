@@ -16,17 +16,16 @@ export const Footer = () => {
         <Grid container className={styles.bgInfoContact} sx={{ paddingTop:{xs: 35, sm: 20}, backgroundImage: `url('${bgImage.src}')`, backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',filter: 'contrast(1.3)' }}>
-            <Box  sx={{ py: 3, px: 4,  }}>
+            <Box  sx={{ py: 3, px: 4,  }} >
                 <Grid container justifyContent="space-between" >
                     <Grid item xs={12} md={6} lg={4} paddingBottom={2}>
                         <Box display={"flex"} flexDirection="column" justifyContent="center" sx={{ px: 2 }}>
                             <Typography variant="h4" color="white">
-                                Etravel Bojorquez
+                                My Landing Page
                             </Typography>
 
-                            <Typography variant="caption" color="white">
-                                Descubre el Caribe auténtico, sus lugares escondidos y las leyendas
-                                locales que solo conocen los que viven en él.{" "}
+                            <Typography variant="caption" color="white" >
+                                lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
                             </Typography>
                         </Box>
                     </Grid>
@@ -37,11 +36,11 @@ export const Footer = () => {
                                 <Stack spacing={1} sx={{ marginLeft: 2 }}>
                                 <Typography variant="body1" color="white">
                                         <strong>Razón Social: </strong>
-                                        Viajes Bojorquez , S.L.
+                                        lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
                                     </Typography>
                                     <Typography variant="body1" color="white">
                                         <strong>Dirección: </strong>
-                                        Calle CRUZ ROJA 1 Bloque 5 Semisótano 17. 46.014 VALENCIA
+                                        calle 5 # 4-20
                                     </Typography>
                                 </Stack>
                             </Grid>
@@ -52,7 +51,7 @@ export const Footer = () => {
                                 </Typography>
                                 <Stack spacing={1}>
                                     <a
-                                        href="/cookies.pdf"
+                                        href=""
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{ color: "white", textDecoration: "none" }}>
@@ -60,7 +59,7 @@ export const Footer = () => {
                                     </a>
 
                                     <a
-                                        href="/aviso_legal.pdf"
+                                        href=""
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{ color: "white", textDecoration: "none" }}>
@@ -68,7 +67,7 @@ export const Footer = () => {
                                     </a>
 
                                     <a
-                                        href="/condiciones.pdf"
+                                        href=""
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{ color: "white", textDecoration: "none" }}>
@@ -89,8 +88,8 @@ export const Footer = () => {
                                 
                                 >
                                 <Grid item xs={12} md={6} lg={4}>
-                                    <Typography variant="caption" color="white" noWrap>
-                                        © ETravel Bojorquez {new Date().getFullYear()}. All right
+                                    <Typography variant="caption" color="white" >
+                                        © My Landing Page {new Date().getFullYear()}. All right
                                         reserved
                                     </Typography>
                                 </Grid>

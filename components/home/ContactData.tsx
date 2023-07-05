@@ -9,7 +9,7 @@ export const ContactData = () => {
     const { t } = useTranslation()
 
     return (
-        <Grid xs={12} sx={{ py: 0, height: 300, transform: 'rotateX(3deg) rotateY(-3deg) rotateZ(1deg)' }} id="contact" position={'relative'} top={50} zIndex={100}>
+        <Grid xs={12} sx={{ py: 0, height: 300 }} position={'relative'} top={50} zIndex={100}>
             
             <Container>
                 <Grid container justifyContent={'center'}>
@@ -17,7 +17,7 @@ export const ContactData = () => {
 
                     <Grid item md={8}>
                     
-                        <Paper sx={{borderRadius: 0 }} elevation={3} >
+                        <Paper sx={{borderRadius: 0, transform: 'rotateX(3deg) rotateY(-3deg) rotateZ(1deg)' }} elevation={3} >
                         <FormatQuoteIcon sx={{backgroundColor: "black", color: "white"}} />
                         <Box padding={1}>
 
