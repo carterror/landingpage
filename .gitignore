@@ -39,3 +39,7 @@ next-env.d.ts
 yarn.lock
 package-lock.json
 .env*
+components/home/DatesData.tsx
+components/home/InitialData.tsx
+components/home/PriceData.tsx
+components/ui/SideMenu.tsx
